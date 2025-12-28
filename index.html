@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Coffee & Eatery</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f6f1eb;
+            color: #2c2c2c;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #2b1d14;
+            color: #fff;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: #fff;
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            background: #c9a36a;
+            color: #2b1d14;
+            padding: 14px 32px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #b08d5b;
+        }
+
+        section {
+            padding: 80px 60px;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 16px;
+        }
+
+        .about h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .menu h3,
+        .gallery h3,
+        .contact h3 {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            margin-bottom: 50px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .menu-item h4 {
+            margin-bottom: 8px;
+        }
+
+        .menu-item span {
+            font-weight: 600;
+            color: #c9a36a;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .contact {
+            background: #2b1d14;
+            color: #fff;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background: #1f140d;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Coffee Shop</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">Tentang</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Galeri</a>
+            <a href="#contact">Kontak</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h2>Nikmati Kopi & Suasana</h2>
+        <p>Coffee shop modern dengan suasana hangat, nyaman, dan cita rasa kopi terbaik di Pekanbaru.</p>
+        <a href="#menu" class="btn">Lihat Menu</a>
+    </section>
+
+    <section class="about" id="about">
+        <div>
+            <h3>Tentang</h3>
+            <p> Coffee & Eatery adalah tempat berkumpul yang menggabungkan kualitas kopi, desain ruang yang nyaman,
+                dan pelayanan terbaik. Cocok untuk bekerja, ngobrol, maupun menikmati waktu santai.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085" alt="Interior Cafe">
+    </section>
+
+    <section class="menu" id="menu">
+        <h3>Menu Favorit</h3>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h4>Espresso</h4>
+                <p>Kopi hitam pekat khas </p><span>Rp 18.000</span>
+            </div>
+            <div class="menu-item">
+                <h4>Cappuccino</h4>
+                <p>Kopi susu creamy lembut</p><span>Rp 25.000</span>
+            </div>
+            <div class="menu-item">
+                <h4>Latte</h4>
+                <p>Perpaduan espresso & susu</p><span>Rp 26.000</span>
+            </div>
+            <div class="menu-item">
+                <h4>Signature </h4>
+                <p>Menu spesial racikan barista</p><span>Rp 30.000</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h3>Galeri</h3>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" />
+            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814" />
+            <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0" />
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" />
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h3>Lokasi & Kontak</h3>
+        <p>📍 Jl. Serayu No.1G, Labuh Baru Tim., Payung Sekaki, Kota Pekanbaru, Riau 28122</p>
+        <p>🕒 Buka Setiap Hari (24 Jam)</p>
+        <p>📞 +62 822-2223-1222</p>
+
+        <div
+            style="margin:40px auto; max-width:900px; border-radius:16px; overflow:hidden; box-shadow:0 10px 25px rgba(0,0,0,0.35);">
+            <iframe src="https://www.google.com/maps?q=TETRA+Coffee+%26+Eatery+Pekanbaru&output=embed" width="100%"
+                height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <p style="margin-top:20px;">
+            <a href="https://wa.me/6282317598686" target="_blank" class="btn">💬 Pesan via WhatsApp</a>
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2025 Coffee & Eatery. All Rights Reserved.</p>
+    </footer>
+
+    <a href="https://wa.me/6282317598686" target="_blank"
+        style="position:fixed; bottom:25px; right:25px; background:#25D366; color:#fff; padding:14px 22px; border-radius:50px; text-decoration:none; font-weight:600; box-shadow:0 10px 20px rgba(0,0,0,0.25); z-index:999;">💬
+        Order WhatsApp</a>
+
+</body>
+
+</html>
